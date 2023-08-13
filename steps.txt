@@ -1,0 +1,43 @@
+C:\Users\hudson\Documents\Django-Project-CRM
+Create a virtual environment: <python -m venv virt>
+Active the virtual environment: <.\virt\Scripts\Activate.ps1>
+pip install Django
+pip install mysql
+pip install mysql-connector
+pip install mysql-connector-python
+django-admin startproject dcrm
+python manage.py startapp website
+create a file mydb.py 
+<
+#Install Mysql on your computer
+#https://dev.mysql.com/downloads/installer/
+#pip install mysql
+#pip install mysql-connector
+#pip install mysql-connector-python
+
+import mysql.connector
+
+dataBase = mysql.connector.connect(
+    host = 'localhost',
+    user = 'root',
+    passwd = ''
+)
+
+#prepare a cursor object
+cursorObject = dataBase.cursor()
+
+#create a database
+cursorObject.execute("CREATE DATABASE dbcrm")
+
+print("All done!")
+>
+
+execute mydb.py <python mydb.py>
+
+create the migrations <python manage.py migrate>
+
+create the super user <python manage.py createsuperuser>
+
+run the server <python manage.py runserver>
+
+
