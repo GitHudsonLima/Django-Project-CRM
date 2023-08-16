@@ -36,8 +36,24 @@ execute mydb.py <python mydb.py>
 
 create the migrations <python manage.py migrate>
 
-create the super user <python manage.py createsuperuser>
+create the super user <python manage.py createsuperuser> ##admin ##GioLuca1
 
 run the server <python manage.py runserver>
 
+# comands git
+$ git config --global user.name "Your Name"
+$ git config --global user.email "Your@youraddress.com"
+$ git config --global push.default matching
+$ git config --global alias.co checkout
+$ git init
+$ git add .
+$ git commit -am 'Initial commit'
 
+#Steps for create a page
+
+    # urls.py # create a path ex. path('', views.home, name='home'),
+    # views.py # create a view ex. 
+        #def home(request):
+            #return render(request, 'home.html',{})
+
+    # create a page ex. home.html
