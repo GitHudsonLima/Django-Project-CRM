@@ -36,7 +36,7 @@
                 <td>{{ record.state }}</td>
                 <td>{{ record.zipcode }}</td>
                 <td>{{ record.created_at }}</td>
-                <td>{{ record.id }}</td>
+                <td><a href="{% url 'record' record.id%}"> {{record.id }}</a></td>
                 </br>
               
           </tr>
@@ -51,7 +51,7 @@
       
 
     {% else %}
-
+    <div class="col-md-6 offset-md-3">
     <h1>Login</h1>
     <br>
     <form method="post" action="{% url 'home' %}">
@@ -69,7 +69,7 @@
           </form>
 
     </form>
-
+  </div>
     {% endif %}
 
 
